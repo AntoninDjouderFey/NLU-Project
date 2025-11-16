@@ -8,5 +8,6 @@ torch>=1.13
 huggingface_hub
 accelerate
 torch-directml
-fasttext
+#matplotlib
+#fasttext-wheel
 tqdm

@@ -1,18 +1,5 @@
 #!/usr/bin/env python3
 # coding: utf-8
-"""
-Preprocess MASSIVE JSONL -> CSV for joint intent + slot training.
-
-Produces:
- - csv/intent_train.csv, intent_valid.csv, intent_test.csv
- - csv/slots_train.csv, slots_valid.csv, slots_test.csv
- - csv/slot_labels.json
-
-Notes:
- - Uses tokenizer offsets (return_offsets_mapping) for reliable token->char alignment.
- - BIO labels are replicated for subword tokens (common choice).
- - You can EXCLUDE locales (e.g., exclude French) to prepare zero-shot experiments.
-"""
 
 import os
 import json
