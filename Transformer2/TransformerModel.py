@@ -169,14 +169,14 @@ class PositionalEncoding(nn.Module):
 
 
 if __name__ == "__main__":
-    fst250bin =  os.path.join(os.path.dirname(os.path.realpath(__file__)),"models","fst250_10K_all.model")
+    fst250bin =  os.path.join(os.path.dirname(os.path.realpath(__file__)),"../models","fst250_10K_all.model")
     model = fasttext.load_model(fst250bin)
     corpus_path =  join(os.path.dirname(os.path.realpath(__file__)),"corpuses","extract0_corpus.txt")
 
     vocab = get_vocab(corpus_path)
 
-    train_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"datasets","train_formatted_dataset.txt")
-    test_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"datasets","test_formatted_dataset.txt")
+    train_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"../datasets","train_formatted_dataset.txt")
+    test_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"../datasets","test_formatted_dataset.txt")
 
     intent2id,slot2id= create_intent2ind_slot2int([train_dataset_path,test_dataset_path])
 
