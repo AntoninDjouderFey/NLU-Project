@@ -1,7 +1,7 @@
 # NLU-Project
 
 Pour entrainer transformer2 et GRU :
-    Lancer d'abord "fastText_training.py"
-    Ensuite indépendemment dataset_extract et IntentAndSlotDataSet
+    Executez d'abord "fastText_training.py" (avec Python 3.10)
+    Ensuite exécutez indépendemment dataset_extract et IntentAndSlotDataSet
 
-Une fois dans un de ces deux dossier, lancer le modèle. Puis entrainez le et testez le.
+Une fois dans un de ces deux dossier (transformer2 ou GRU), exécutez le modèle (fichier se terminant par Model). Puis entrainez le (exécuter le fichier commençant par train) et évaluez le (exécuter le fichier commençant par test).
