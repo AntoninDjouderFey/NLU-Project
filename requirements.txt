@@ -1,0 +1,12 @@
+﻿numpy>=1.21
+pandas>=1.3
+scikit-learn>=1.0
+transformers>=4.20
+datasets>=2.0
+tqdm>=4.60
+torch>=1.13
+huggingface_hub
+accelerate
+torch-directml
+fasttext
+tqdm
