@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # coding: utf-8
-
+"""
+Use this command to preprocess 
+python data_preprocessing.py --input_dir ../../massive_extract --out_dir csv_zero_shot --tokenizer xlm-roberta-base --exclude_locales fr-FR fr-CA
+"""
 import os
 import json
 import csv
@@ -18,7 +21,7 @@ parser.add_argument("--input_dir", default="../massive_extract", help="Directory
 parser.add_argument("--out_dir", default="csv", help="Directory to save CSV outputs")
 parser.add_argument("--tokenizer", default="bert-base-multilingual-cased",
                     help="HF tokenizer name (use a multilingual tokenizer for zero-shot)")
-parser.add_argument("--languages_exlude", nargs="*", default=[], help="Locales to exclude from training (e.g. fr-FR fr-CA)")
+parser.add_argument("--languages_exlude", nargs="*", default=[], help="Locales to exclude from training")
 parser.add_argument("--train_val_split", type=float, default=0.1, help="If 'valid' partition not present, split train -> valid fraction")
 parser.add_argument("--min_slot_coverage", type=float, default=0.0, help="If >0: filter utterances that have no slot labels")
 args = parser.parse_args()
