@@ -145,9 +145,9 @@ if __name__ == "__main__":
     print(f"Vocab size {len(vocab)}")
     model = None #Libère le modèle fastText de la mémoire
 
-    train_nofr_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"datasets","train_nofr_formatted_dataset.txt")
-    test_nofr_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"datasets","test_nofr_formatted_dataset.txt")
-    fr_eval_dataset_path = join(os.path.dirname(os.path.realpath(__file__)),"datasets","fr_eval_dataset.txt")
+    train_nofr_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"../datasets","train_nofr_formatted_dataset.txt")
+    test_nofr_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"../datasets","test_nofr_formatted_dataset.txt")
+    fr_eval_dataset_path = join(os.path.dirname(os.path.realpath(__file__)),"../datasets","fr_eval_dataset.txt")
 
     #files_list = ["de-DE.jsonl","en-US.jsonl","es-ES.jsonl","fr-FR.jsonl","it-IT.jsonl"]
     ds_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),"massive_extract")
@@ -155,8 +155,8 @@ if __name__ == "__main__":
     file_list_fr = ["fr-FR.jsonl"]
     
     # Chargement des fichiers d'entraînement et de test formatés
-    train_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"datasets","train_formatted_dataset.txt")
-    test_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"datasets","test_formatted_dataset.txt")
+    train_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"../datasets","train_formatted_dataset.txt")
+    test_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"../datasets","test_formatted_dataset.txt")
     
     # Création des mappings intent→id et slot→id
     intent2id,slot2id= create_intent2ind_slot2int([train_dataset_path,test_dataset_path])

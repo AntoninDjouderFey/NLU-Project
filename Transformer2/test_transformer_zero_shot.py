@@ -130,7 +130,7 @@ if __name__ == "__main__":
     print(f"train using device {device}")
 
     #fst100bin =  os.path.join(os.path.dirname(os.path.realpath(__file__)),"models","fst100_latin.model")
-    fasttext_path =  os.path.join(os.path.dirname(os.path.realpath(__file__)),"../models","fst100_all.model")
+    fasttext_path =  os.path.join(os.path.dirname(os.path.realpath(__file__)),"models","fst100_all.model")
 
     #Chargement du modèle fastText pré-entrainé pour générer les embeddings 
     model = fasttext.load_model(fasttext_path)
@@ -143,7 +143,7 @@ if __name__ == "__main__":
     model = None #Libère le modèle fastText de la mémoire
 
     
-    fr_eval_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"datasets","fr_eval_dataset.txt")
+    fr_eval_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"../datasets","fr_eval_dataset.txt")
     
 
     #files_list = ["de-DE.jsonl","en-US.jsonl","es-ES.jsonl","fr-FR.jsonl","it-IT.jsonl"]
@@ -152,8 +152,8 @@ if __name__ == "__main__":
     file_list_fr = ["fr-FR.jsonl"]
     
     # Chargement des fichiers d'entraînement et de test formatés
-    train_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"datasets","train_formatted_dataset.txt")
-    test_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"datasets","test_formatted_dataset.txt")
+    train_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"../datasets","train_formatted_dataset.txt")
+    test_dataset_path =  join(os.path.dirname(os.path.realpath(__file__)),"../datasets","test_formatted_dataset.txt")
     
     # Création des mappings intent→id et slot→id
     intent2id,slot2id= create_intent2ind_slot2int([train_dataset_path,test_dataset_path])
