@@ -1,0 +1,1 @@
+python train.py --slots_train_csv data/csv_zero_shot/slots_train.csv --slots_valid_csv data/csv_zero_shot/slots_valid.csv --slot_labels_json data/csv_zero_shot/slot_labels.json --model_name xlm-roberta-base --output_dir models/joint_xlmr --epochs 6 --batch_size 8 --lr 2e-5
