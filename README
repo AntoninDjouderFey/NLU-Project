@@ -1,4 +1,0 @@
-# NLU-Project
-
-Pour mettre en place d'un environnement virtuel:  .\create_venv.ps1
-L'environement virtuel ne fonctionne que pour transformer 1 (BIO)
